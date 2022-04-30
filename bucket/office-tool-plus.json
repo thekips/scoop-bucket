@@ -1,0 +1,27 @@
+{
+    "homepage": "https://otp.landian.vip/en-us/",
+    "description": "Office Tool Plus can help you download Office as fast as possible.",
+    "version": "8.3.9.0",
+    "url": "https://otp.landian.vip/redirect/download.php?type=7z&site=sdumirror#dl.7z",
+    "hash": "13f3141b9d6a0d2dda66da6373be579038b9ff471ab3f42c0038880ed0b126d8",
+    "shortcuts": [
+        [
+            "Office Tool Plus.exe",
+            "Office Tool Plus"
+        ]
+    ],
+    "installer": {
+        "script": [
+            "Expand-7zipArchive \"$dir\\download.php\" -Removal",
+            "Move-Item \"$dir\\Office Tool\\*\" \"$dir\"",
+            "Remove-Item \"$dir\\Office Tool\""
+        ]
+    },
+    "checkver": {
+        "url": "https://otp.landian.vip/en-us/download.html",
+        "regex": "Version: ([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://otp.landian.vip/redirect/download.php?type=7z&site=sdumirror#dl.7z"
+    }
+}
