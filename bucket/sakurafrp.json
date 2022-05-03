@@ -2,17 +2,15 @@
     "homepage": "https://www.natfrp.com/",
     "description": "免费穿，轻松透",
     "url": "https://getfrp.sh/l/SakuraLauncher.exe",
-    "version": "2.0.4.2",
-    "hash": "da3388671ffb5b195fff707b8a576187434619c2e79d436f879b8379505e6c0a",
+    "version": "2.0.4.3",
+    "hash": "2ce38577ec57c8cd265d3c8e43817dd49e1ba64ca94c98490a256bd80b16aade",
     "shortcuts": [
         [
             "SakuraLauncher.exe",
             "SakuraLauncher"
         ]
     ],
-    "bin": [
-         "frpc.exe"
-    ],
+    "bin": "frpc.exe",
     "installer": {
         "script": [
             "Move-Item \"$dir\\SakuraLauncher.exe\" \"$dir\\Sakura.exe\"",
