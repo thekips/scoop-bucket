@@ -1,18 +1,16 @@
 {
     "homepage": "https://github.com/taojy123/KeymouseGo/",
     "description": "KeymouseGo",
-    "version": "3.2.2",
-    "url": "https://github.com/Blinue/Magpie/releases/latest/download/Magpie_v0.8.1.zip",
-    "hash": "c7bfd23886b8ad3bdb540437f6d4a32ab8b0f03dd198e693744bc187bac619c2",
+    "version": "4.0",
+    "url": "https://github.com/taojy123/KeymouseGo/releases/download/v4.0/KeymouseGo_v4.0.exe",
+    "hash": "fb9986f11890dd710a89aa45557738cf3adecdf93386fb74ed21a37421664368",
     "shortcuts": [
         [
             "KeymouseGo.exe",
             "KeymouseGo"
         ]
     ],
-    "persist": [
-        "scripts"
-    ],
+    "persist": "scripts",
     "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/taojy123/KeymouseGo/releases/download/v$version/KeymouseGo_v$version.exe"
