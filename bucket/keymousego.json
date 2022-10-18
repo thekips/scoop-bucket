@@ -11,6 +11,9 @@
         ]
     ],
     "persist": "scripts",
+    "installer": {
+        "script": "Move-Item $dir\\KeymouseGo_v$version-win64.exe $dir\\KeymouseGo.exe"
+    },
     "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/taojy123/KeymouseGo/releases/download/v$version/KeymouseGo_v$version-win64.exe"
