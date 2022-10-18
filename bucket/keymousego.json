@@ -1,9 +1,9 @@
 {
     "homepage": "https://github.com/taojy123/KeymouseGo/",
     "description": "KeymouseGo",
-    "version": "4.1",
-    "url": "https://github.com/taojy123/KeymouseGo/releases/download/v4.1/KeymouseGo_v4.1.exe",
-    "hash": "0b2ede7ae28276b1fae5f64f20b2e68ca45079b2cc478b6b885e017a2c095190",
+    "version": "5.1",
+    "url": "https://github.com/taojy123/KeymouseGo/releases/download/v5.1/KeymouseGo_v5.1-win64.exe",
+    "hash": "4fb89e9b13b31e852bb6ceb127ed239cd936f71c0787fbf742033d02fd4282c5",
     "shortcuts": [
         [
             "KeymouseGo.exe",
@@ -13,6 +13,6 @@
     "persist": "scripts",
     "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/taojy123/KeymouseGo/releases/download/v$version/KeymouseGo_v$version.exe"
+        "url": "https://github.com/taojy123/KeymouseGo/releases/download/v$version/KeymouseGo_v$version-win64.exe"
     }
 }
