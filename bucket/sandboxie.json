@@ -9,6 +9,7 @@
             "hash": "dba16b73d334908eb866bedc34427f9ae316cc7034e004206579b2f8383aed3b",
             "installer": {
                 "script": [
+                    "Move-Item $dir\\Sandboxie-Plus-x64-v$version.exe $dir\\Sandboxie-install.exe",
                     "Invoke-ExternalCommand \"$dir\\Sandboxie-install.exe\" -ArgumentList @('/install','/S',\"/D=$dir\") -RunAs | Out-Null",
                     "Remove-Item \"$dir\\Sandboxie-install.exe\" -Force -Recurse"
                 ]
@@ -25,6 +26,7 @@
             "hash": "477e61c122626174992d5602747bb25718c0e2cc398d306107771c4cdde9b66c",
             "installer": {
                 "script": [
+                    "Move-Item $dir\\Sandboxie-Plus-x32-v$version.exe $dir\\Sandboxie-install.exe",
                     "Invoke-ExternalCommand \"$dir\\Sandboxie-install.exe\" -ArgumentList @('/install','/S',\"/D=$dir\") -RunAs | Out-Null",
                     "Remove-Item \"$dir\\Sandboxie-install.exe\" -Force -Recurse"
                 ]
