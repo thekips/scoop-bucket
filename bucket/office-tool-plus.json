@@ -18,7 +18,7 @@
         ]
     },
     "checkver": {
-        "url": "https://otp.landian.vip/changelog/?culture=en-us",
+        "url": "https://otp.landian.vip/en-us/download.html",
         "regex": "V([\\d.]+)"
     },
     "autoupdate": {
