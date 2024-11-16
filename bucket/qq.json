@@ -1,31 +1,52 @@
 {
-    "homepage": "https://im.qq.com",
-    "description": "I'm QQ - 每一天，乐在沟通",
-    "version": "9.7.23.240423",
-    "license": "Copyright © 1998 - 2021 Tencent. All Rights Reserved.",
-    "url": "https://dldir1.qq.com/qqfile/qq/PCQQ9.7.23/QQ9.7.23.240423.exe#/dl.7z",
-    "hash": "b0c50574af7c116a25905700569cb1c10410bff7e6681c95bf3a3903803a98cb",
+    "homepage": "https://im.qq.com/pcqq/index.shtml",
+    "description": "An instant messaging software service developed by Tencent",
+    "license": "Freeware",
+    "version": "9.9.16.241112",
+    "architecture": {
+        "64bit": {
+            "url": "https://dldir1.qq.com/qqfile/qq/QQNT/Windows/QQ_9.9.16_241112_x64_01.exe#/dl.7z",
+            "hash": "1a77884bc9e4ffcd7a30a1a118d4339d19b212c48bdfccdfa9f4b98e284cf99c"
+        },
+        "32bit": {
+            "url": "https://dldir1.qq.com/qqfile/qq/QQNT/Windows/QQ_9.9.16_241112_x86_01.exe#/dl.7z",
+            "hash": "eb3ab2d7037bd8364cb10715717c2924d3275207a4a9c79677926c0c1eb4863d"
+        },
+        "arm64": {
+            "url": "https://dldir1.qq.com/qqfile/qq/QQNT/Windows/QQ_9.9.16_241112_arm64_01.exe#/dl.7z",
+            "hash": "fd7b9f5601e69729e830f1cbdc8659e1d9d82c0532977185321a7624dc242d04"
+        }
+    },
+    "extract_dir": "Files",
     "shortcuts": [
         [
-            "Bin\\QQScLauncher.exe",
+            "QQ.exe",
             "QQ"
         ]
     ],
-    "installer": {
-        "script": [
-            "Get-Item \"$dir\\*\" -Exclude .rsrc | Remove-Item",
-            "Expand-7zipArchive \"$dir\\.rsrc\\2052\\MSI\\101\" \"Files\" -Destination \"$dir\\\" -Removal",
-            "Move-Item \"$dir\\Files\\*\" \"$dir\"",
-            "Expand-7zipArchive \"$dir\\.rsrc\\2052\\MSI\\102\" \"TXSSO\\TXSSOSetup.exe\" -Destination \"$dir\" -Removal",
-            "Expand-7zipArchive \"$dir\\TXSSO\\TXSSOSetup.exe\" \"TXSSO\" -Destination \"$dir\\bin\" -Removal"
-        ]
-    },
-    "post_install": "Echo \"$dir\\Files\" \"$dir\\.rsrc\" \"$dir\\TXSSO\" | Remove-Item -Recurse",
     "checkver": {
-        "url": "https://im.qq.com/pcqq",
-        "regex": "QQ([\\d.]+).exe"
+        "script": [
+            "$url = 'https://im.qq.com/pcqq/index.shtml'",
+            "$resp = Invoke-WebRequest -Uri $url",
+            "$cont = $resp.Content",
+            "$pattern = 'https://qq-web.cdn-go.cn.*windowsDownloadUrl.js'",
+            "$jsUrl = [regex]::Match($cont, $pattern).Value",
+            "Invoke-WebRequest -Uri $jsUrl"
+        ],
+        "regex": "QQNT/Windows/QQ_([\\d\\.]+)_([\\d]+)_x86_01.exe",
+        "replace": "${1}.${2}"
     },
     "autoupdate": {
-        "url": "https://dldir1.qq.com/qqfile/qq/PCQQ$majorVersion.$minorVersion.$patchVersion/QQ$majorVersion.$minorVersion.$patchVersion.$buildVersion.exe#/dl.7z"
+        "architecture": {
+            "64bit": {
+                "url": "https://dldir1.qq.com/qqfile/qq/QQNT/Windows/QQ_$match1_$match2_x64_01.exe#/dl.7z"
+            },
+            "32bit": {
+                "url": "https://dldir1.qq.com/qqfile/qq/QQNT/Windows/QQ_$match1_$match2_x86_01.exe#/dl.7z"
+            },
+            "arm64": {
+                "url": "https://dldir1.qq.com/qqfile/qq/QQNT/Windows/QQ_$match1_$match2_arm64_01.exe#/dl.7z"
+            }
+        }
     }
 }
