@@ -19,7 +19,7 @@
     },
     "checkver": {
         "url": "https://otp.landian.vip/en-us/download.html",
-        "regex": "V([\\d.]+)"
+        "regex": "Version: ([\\d.]+)"
     },
     "autoupdate": {
         "url": "https://otp.landian.vip/redirect/download.php?type=7z&site=sdumirror#dl.7z"
