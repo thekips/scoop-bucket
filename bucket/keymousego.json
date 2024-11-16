@@ -16,7 +16,6 @@
     },
     "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/taojy123/KeymouseGo/releases/download/v$version/KeymouseGo_v$cleanVersion-win.exe"
-    },
-    "$cleanVersion": "$version.replace('.', '_')"
+        "url": "https://github.com/taojy123/KeymouseGo/releases/download/v$version/KeymouseGo_v$majorVersion_$minorVersion_$patchVersion-win.exe"
+    }
 }
