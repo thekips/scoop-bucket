@@ -1,9 +1,9 @@
 {
     "homepage": "https://otp.landian.vip/en-us/",
     "description": "Office Tool Plus can help you download Office as fast as possible.",
-    "version": "10.20.15.0",
+    "version": "10.21.25.0",
     "url": "https://otp.landian.vip/redirect/download.php?type=7z&site=sdumirror#dl.7z",
-    "hash": "0dcaf5b58d68f28e09bb0c241c2e01189c16f872448236e94e229f7626662cc2",
+    "hash": "20193f00d7ec882612e3c6bd8f1e83a8b21983364908fbf658480e5920597de9",
     "shortcuts": [
         [
             "Office Tool Plus.exe",
