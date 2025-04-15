@@ -1,9 +1,9 @@
 {
     "homepage": "https://www.natfrp.com/",
     "description": "免费穿，轻松透",
-    "url": "https://nya.globalslb.net/natfrp/client/launcher-windows/3.1.2.2/SakuraLauncher.exe",
-    "version": "3.1.2.2",
-    "hash": "9d46f047d003fd491f94c04a4067d0f8ba114515ce46f4a156b9842b92989c73",
+    "url": "https://nya.globalslb.net/natfrp/client/launcher-windows/3.1.3.0/SakuraLauncher.exe",
+    "version": "3.1.3.0",
+    "hash": "93ab9f3aae2e50eee4223772ace0af396487c082861c06749af70105c97116d8",
     "shortcuts": [
         [
             "SakuraLauncher.exe",
